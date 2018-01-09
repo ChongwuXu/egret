@@ -38,15 +38,13 @@ var puremvc;
 (function (puremvc) {
     "use strict";
     var View = (function () {
-        function View(key) {
+        function View() {
             this.mediatorMap = null;
             this.observerMap = null;
-            this.multitonKey = null;
-            if (View.instanceMap[key]) {
-                throw Error(View.MULTITON_MSG);
+            if (View.instance) {
+                throw Error(View.SINGLETON_MSG);
             }
-            View.instanceMap[key] = this;
-            this.multitonKey = key;
+            View.instance = this;
             this.mediatorMap = {};
             this.observerMap = {};
             this.initializeView();
@@ -95,7 +93,6 @@ var puremvc;
             if (this.mediatorMap[name]) {
                 return;
             }
-            mediator.initializeNotifier(this.multitonKey);
             this.mediatorMap[name] = mediator;
             var interests = mediator.listNotificationInterests();
             var len = interests.length;
@@ -127,16 +124,13 @@ var puremvc;
         View.prototype.hasMediator = function (mediatorName) {
             return this.mediatorMap[mediatorName] != null;
         };
-        View.instanceMap = {};
-        View.MULTITON_MSG = "View instance for this multiton key already constructed!";
-        View.getInstance = function getInstance(key) {
-            if (!View.instanceMap[key]) {
-                View.instanceMap[key] = new View(key);
+        View.SINGLETON_MSG = "View singleton already constructed!";
+        View.instance = null;
+        View.getInstance = function getInstance() {
+            if (!View.instance) {
+                View.instance = new View();
             }
-            return View.instanceMap[key];
-        };
-        View.removeView = function removeView(key) {
-            delete View.instanceMap[key];
+            return View.instance;
         };
         return View;
     })();
@@ -146,26 +140,23 @@ var puremvc;
 (function (puremvc) {
     "use strict";
     var Controller = (function () {
-        function Controller(key) {
+        function Controller() {
             this.view = null;
             this.commandMap = null;
-            this.multitonKey = null;
-            if (Controller.instanceMap[key]) {
-                throw Error(Controller.MULTITON_MSG);
+            if (Controller.instance) {
+                throw Error(Controller.SINGLETON_MSG);
             }
-            Controller.instanceMap[key] = this;
-            this.multitonKey = key;
+            Controller.instance = this;
             this.commandMap = {};
             this.initializeController();
         }
         Controller.prototype.initializeController = function () {
-            this.view = puremvc.View.getInstance(this.multitonKey);
+            this.view = puremvc.View.getInstance();
         };
         Controller.prototype.executeCommand = function (notification) {
             var commandClassRef = this.commandMap[notification.getName()];
             if (commandClassRef) {
                 var command = new commandClassRef();
-                command.initializeNotifier(this.multitonKey);
                 command.execute(notification);
             }
         };
@@ -184,16 +175,13 @@ var puremvc;
                 delete this.commandMap[notificationName];
             }
         };
-        Controller.instanceMap = {};
-        Controller.MULTITON_MSG = "Controller instance for this multiton key already constructed!";
-        Controller.getInstance = function getInstance(key) {
-            if (!Controller.instanceMap[key]) {
-                Controller.instanceMap[key] = new Controller(key);
+        Controller.instance = null;
+        Controller.SINGLETON_MSG = "Controller singleton already constructed!";
+        Controller.getInstance = function getInstance() {
+            if (!Controller.instance) {
+                Controller.instance = new Controller();
             }
-            return Controller.instanceMap[key];
-        };
-        Controller.removeController = function removeController(key) {
-            delete Controller.instanceMap[key];
+            return Controller.instance;
         };
         return Controller;
     })();
@@ -203,21 +191,18 @@ var puremvc;
 (function (puremvc) {
     "use strict";
     var Model = (function () {
-        function Model(key) {
+        function Model() {
             this.proxyMap = null;
-            this.multitonKey = null;
-            if (Model.instanceMap[key]) {
-                throw Error(Model.MULTITON_MSG);
+            if (Model.instance) {
+                throw Error(Model.SINGLETON_MSG);
             }
-            Model.instanceMap[key] = this;
-            this.multitonKey = key;
+            Model.instance = this;
             this.proxyMap = {};
             this.initializeModel();
         }
         Model.prototype.initializeModel = function () {
         };
         Model.prototype.registerProxy = function (proxy) {
-            proxy.initializeNotifier(this.multitonKey);
             this.proxyMap[proxy.getProxyName()] = proxy;
             proxy.onRegister();
         };
@@ -235,16 +220,13 @@ var puremvc;
         Model.prototype.hasProxy = function (proxyName) {
             return this.proxyMap[proxyName] != null;
         };
-        Model.MULTITON_MSG = "Model instance for this multiton key already constructed!";
-        Model.instanceMap = {};
-        Model.getInstance = function getInstance(key) {
-            if (!Model.instanceMap[key]) {
-                Model.instanceMap[key] = new Model(key);
+        Model.SINGLETON_MSG = "Model singleton already constructed!";
+        Model.instance = null;
+        Model.getInstance = function getInstance() {
+            if (!Model.instance) {
+                Model.instance = new Model();
             }
-            return Model.instanceMap[key];
-        };
-        Model.removeModel = function removeModel(key) {
-            delete Model.instanceMap[key];
+            return Model.instance;
         };
         return Model;
     })();
@@ -297,16 +279,14 @@ var puremvc;
 (function (puremvc) {
     "use strict";
     var Facade = (function () {
-        function Facade(key) {
+        function Facade() {
             this.model = null;
             this.view = null;
             this.controller = null;
-            this.multitonKey = null;
-            if (Facade.instanceMap[key]) {
-                throw Error(Facade.MULTITON_MSG);
+            if (Facade.instance) {
+                throw Error(Facade.SINGLETON_MSG);
             }
-            this.initializeNotifier(key);
-            Facade.instanceMap[key] = this;
+            Facade.instance = this;
             this.initializeFacade();
         }
         Facade.prototype.initializeFacade = function () {
@@ -316,17 +296,17 @@ var puremvc;
         };
         Facade.prototype.initializeModel = function () {
             if (!this.model) {
-                this.model = puremvc.Model.getInstance(this.multitonKey);
+                this.model = puremvc.Model.getInstance();
             }
         };
         Facade.prototype.initializeController = function () {
             if (!this.controller) {
-                this.controller = puremvc.Controller.getInstance(this.multitonKey);
+                this.controller = puremvc.Controller.getInstance();
             }
         };
         Facade.prototype.initializeView = function () {
             if (!this.view) {
-                this.view = puremvc.View.getInstance(this.multitonKey);
+                this.view = puremvc.View.getInstance();
             }
         };
         Facade.prototype.registerCommand = function (notificationName, commandClassRef) {
@@ -386,28 +366,13 @@ var puremvc;
             }
             this.notifyObservers(new puremvc.Notification(name, body, type));
         };
-        Facade.prototype.initializeNotifier = function (key) {
-            this.multitonKey = key;
-        };
-        Facade.MULTITON_MSG = "Facade instance for this multiton key already constructed!";
-        Facade.instanceMap = {};
-        Facade.getInstance = function getInstance(key) {
-            if (!Facade.instanceMap[key]) {
-                Facade.instanceMap[key] = new Facade(key);
+        Facade.SINGLETON_MSG = "Facade singleton already constructed!";
+        Facade.instance = null;
+        Facade.getInstance = function getInstance() {
+            if (!Facade.instance) {
+                Facade.instance = new Facade();
             }
-            return Facade.instanceMap[key];
-        };
-        Facade.hasCore = function hasCore(key) {
-            return Facade.instanceMap[key] ? true : false;
-        };
-        Facade.removeCore = function removeCore(key) {
-            if (!Facade.instanceMap[key]) {
-                return;
-            }
-            puremvc.Model.removeModel(key);
-            puremvc.View.removeView(key);
-            puremvc.Controller.removeController(key);
-            delete Facade.instanceMap[key];
+            return Facade.instance;
         };
         return Facade;
     })();
@@ -418,11 +383,9 @@ var puremvc;
     "use strict";
     var Notifier = (function () {
         function Notifier() {
-            this.multitonKey = null;
+            this.facade = null;
+            this.facade = puremvc.Facade.getInstance();
         }
-        Notifier.prototype.initializeNotifier = function (key) {
-            this.multitonKey = key;
-        };
         Notifier.prototype.sendNotification = function (name, body, type) {
             if (typeof body === "undefined") {
                 body = null;
@@ -430,17 +393,8 @@ var puremvc;
             if (typeof type === "undefined") {
                 type = null;
             }
-            if (this.facade()) {
-                this.facade().sendNotification(name, body, type);
-            }
+            this.facade.sendNotification(name, body, type);
         };
-        Notifier.prototype.facade = function () {
-            if (this.multitonKey === null) {
-                throw Error(Notifier.MULTITON_MSG);
-            }
-            return puremvc.Facade.getInstance(this.multitonKey);
-        };
-        Notifier.MULTITON_MSG = "multitonKey for this Notifier not yet initialized!";
         return Notifier;
     })();
     puremvc.Notifier = Notifier;

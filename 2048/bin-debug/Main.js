@@ -166,7 +166,10 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
-        var sky = this.createBitmapByName("bg_jpg");
+        // let sky = this.createBitmapByName("bg_jpg");
+        // this.addChild(sky);
+        var sky = new egret.Bitmap();
+        sky.texture = RES.getRes("bg_jpg");
         this.addChild(sky);
         var stageW = this.stage.stageWidth;
         var stageH = this.stage.stageHeight;
@@ -209,12 +212,24 @@ var Main = (function (_super) {
         textfield.x = 172;
         textfield.y = 135;
         this.textfield = textfield;
-        var button = new eui.Button();
-        button.label = "Click!";
-        button.horizontalCenter = 0;
-        button.verticalCenter = 0;
-        this.addChild(button);
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        var uiTest = new UITest();
+        this.addChild(uiTest);
+        // let video : VideoTest = new VideoTest();
+        // this.addChild(video);
+        // let button = new eui.Button();
+        // button.label = "Click!";
+        // button.horizontalCenter = 0;
+        // button.verticalCenter = 0;
+        // this.addChild(button);
+        // button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+        // let tim:TimerTest = new TimerTest();
+        // this.addChild(tim);
+        // let _myGrid:GridSprite = new GridSprite();
+        // this.addChild(_myGrid);
+        // let ach : AnchorTest = new AnchorTest();
+        // this.addChild(ach);
+        // let btTest:BitmapTest = new BitmapTest();
+        // this.addChild(btTest);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -267,3 +282,4 @@ var Main = (function (_super) {
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");
+//# sourceMappingURL=Main.js.map

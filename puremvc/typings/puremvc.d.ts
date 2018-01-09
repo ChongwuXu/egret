@@ -64,7 +64,6 @@ declare module puremvc
 	export interface INotifier
 	{
 		sendNotification( name:string, body?:any, type?:string ):void;
-		initializeNotifier( key:string ):void;
 	}
 
 	export interface IObserver
@@ -109,14 +108,13 @@ declare module puremvc
         public notifyObserver(notification: INotification): void;
         public compareNotifyContext(object: any): boolean;
     }
-
-    export class View
+	
+	export class View
 		implements IView
 	{
         public mediatorMap: Object;
         public observerMap: Object;
-        public multitonKey: string;
-        constructor (key: string);
+        constructor ();
         public initializeView(): void;
         public registerObserver(notificationName: string, observer: IObserver): void;
         public removeObserver(notificationName: string, notifyContext: any): void;
@@ -125,45 +123,41 @@ declare module puremvc
         public retrieveMediator(mediatorName: string): IMediator;
         public removeMediator(mediatorName: string): IMediator;
         public hasMediator(mediatorName: string): boolean;
-        static instanceMap: Object;
-        static MULTITON_MSG: string;
-        static getInstance(key: string): IView;
-        static removeView(key: string): void;
+        static SINGLETON_MSG: string;
+        static instance: IView;
+        static getInstance(): IView;
     }
+
 
     export class Controller
 		implements IController
 	{
         public view: IView;
         public commandMap: Object;
-        public multitonKey: string;
-        constructor (key: string);
+        constructor ();
         public initializeController(): void;
         public executeCommand(notification: INotification): void;
         public registerCommand(notificationName: string, commandClassRef: Function): void;
         public hasCommand(notificationName: string): boolean;
         public removeCommand(notificationName: string): void;
-        static instanceMap: Object;
-        static MULTITON_MSG: string;
-        static getInstance(key: string): IController;
-        static removeController(key: string): void;
+        static instance: IController;
+        static SINGLETON_MSG: string;
+        static getInstance(): IController;
     }
 
     export class Model
 		implements IModel
 	{
         public proxyMap: Object;
-        public multitonKey: string;
-        constructor (key: string);
+        constructor ();
         public initializeModel(): void;
         public registerProxy(proxy: IProxy): void;
         public removeProxy(proxyName: string): IProxy;
         public retrieveProxy(proxyName: string): IProxy;
         public hasProxy(proxyName: string): boolean;
-        static MULTITON_MSG: string;
-        static instanceMap: Object;
-        static getInstance(key): IModel;
-        static removeModel(key): void;
+        static SINGLETON_MSG: string;
+        static instance: IModel;
+        static getInstance(): IModel;
     }
 
     export class Notification
@@ -187,8 +181,7 @@ declare module puremvc
         public model: IModel;
         public view: IView;
         public controller: IController;
-        public multitonKey: string;
-        constructor (key);
+        constructor ();
         public initializeFacade(): void;
         public initializeModel(): void;
         public initializeController(): void;
@@ -206,22 +199,17 @@ declare module puremvc
         public hasMediator(mediatorName: string): boolean;
         public notifyObservers(notification: INotification): void;
         public sendNotification(name: string, body?: any, type?: string): void;
-        public initializeNotifier(key: string): void;
-        static MULTITON_MSG: string;
-        static instanceMap: Object;
-        static getInstance(key: string): IFacade;
-        static hasCore(key: string): boolean;
-        static removeCore(key: string): void;
+        static SINGLETON_MSG: string;
+        static instance: IFacade;
+        static getInstance(): IFacade;
     }
 
     export class Notifier
 		implements INotifier
 	{
-        public multitonKey: string;
-        public initializeNotifier(key): void;
+        public facade: IFacade;
+        constructor ();
         public sendNotification(name: string, body?: any, type?: string): void;
-        public facade(): IFacade;
-        static MULTITON_MSG: string;
     }
 
     export class MacroCommand
