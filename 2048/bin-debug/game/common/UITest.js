@@ -23,18 +23,77 @@ var UITest = (function (_super) {
     };
     UITest.prototype.initBution = function () {
         var btn = new eui.Button();
+        btn.label = "发送";
         btn.x = 100;
         btn.y = 100;
         btn.width = 200;
         btn.height = 100;
         btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         this.addChild(btn);
+        var btn1 = new eui.Button();
+        btn1.label = "连接";
+        btn1.x = 100;
+        btn1.y = 200;
+        btn1.width = 200;
+        btn1.height = 100;
+        btn1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick1, this);
+        this.addChild(btn1);
+    };
+    UITest.prototype.onClick1 = function (event) {
+        this.sock = new egret.WebSocket();
+        this.sock.addEventListener(egret.ProgressEvent.SOCKET_DATA, this.onReceiveMessage, this);
+        this.sock.addEventListener(egret.Event.CONNECT, this.onScoketOpen, this);
+        this.sock.connect("echo.websocket.org", 80);
     };
     UITest.prototype.onClick = function (event) {
-        var sdk = new WochengSDK();
-        sdk.doCheckNetwork(function (resultCode) {
-            console.log("####:" + resultCode);
+        var _this = this;
+        protobuf.load("resource/protobuf/test.proto", function (errr, root) {
+            _this._proto = root.Test;
+            console.log(_this._proto);
         });
+        if (this.sock && this.sock.connected) {
+            var cmd = '{"cmd":"uzwan_login","gameId":"0","from":"guzwan","userId":"3565526"}';
+            this.sock.writeUTF(cmd);
+        }
+        else {
+            console.log("socket not connected!");
+        }
+        // var sdk:WochengSDK = new WochengSDK();
+        // var boxId = "";
+        // var productId = "1000000003";
+        // var customerId = "test032401";
+        // var contentId = "test";
+        // var contentName = "欢喜冤家";
+        // var price = 100;
+        // var redirectUrl = "http://www.baidu.com";
+        // var failUrl = "http://www.126.com";
+        // var broadbandid = "1";
+        // var param2 = "";
+        // var param3 = "";
+        // var param4 = "";
+        // var param5 = "";
+        // var userCode = "";
+        // var productIdThird = "";
+        // var platform = "";
+        // var payVersion = "8002";
+        // var payChannelId = "30190";
+        // var payAppId = "117951617";
+        // var payAppName = "山东广电";
+        // var payUA = "OTHERTVSTORE_SDGDTV";
+        // sdk.doOrderProduct(boxId, productId, customerId, contentId, contentName, price, redirectUrl, failUrl, broadbandid, param2, param3, param4, param5, userCode, productIdThird, platform, payVersion, payChannelId, payAppId, payAppName, payUA, function (resultCode, resultMsg) {
+        //         console.log("resultCode:" + resultCode + ";resultMsg:" + resultMsg);
+        //     }
+        // );
+        // sdk.doCheckNetwork((resultCode)=>{
+        //     console.log("####:"+resultCode);
+        // })
+    };
+    UITest.prototype.onReceiveMessage = function (event) {
+        var msg = this.sock.readUTF();
+        console.log("收到数据：" + msg);
+    };
+    UITest.prototype.onScoketOpen = function (event) {
+        console.log("链接服务器成功！");
     };
     UITest.prototype.initProgressBar = function () {
         this.pBar = new eui.ProgressBar();

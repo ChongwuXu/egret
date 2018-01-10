@@ -46,6 +46,10 @@
     {
       "name":"WochengSdk",
       "path":"../wcsdk"
+    },
+    {
+      "name":"protobuf",
+      "path":"../protobuf"
     }
   ]
 }

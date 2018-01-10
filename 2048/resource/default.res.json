@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,buttons_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,buttons_json,msg_proto",
 			"name": "preload"
 		}
 	],
@@ -132,15 +132,20 @@
 			"name": "egret_icon_png"
 		},
 		{
-			"name": "description_json",
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
 		},
 		{
-			"name": "buttons_json",
-			"type": "sheet",
 			"url": "assets/Button/buttons.json",
-			"subkeys": "custom_down_png,custom_normal_png,icon_down_png,icon_normal_png,music_down_png,music_non_down_png,music_non_normal_png,music_normal_png,pause_down_png,pause_normal_png,play_down_png,play_normal_png,retry_down_png,retry_normal_png,retry2_down_png,retry2_normal_png,return_down_png,return_normal_png,setting_down_png,setting_normal_png,sound_down_png,sound_non_down_png,sound_non_normal_png,sound_normal_png"
+			"type": "sheet",
+			"name": "buttons_json",
+			"subkeys": "custom_down_png,custom_normal_png,icon_down_png,icon_normal_png,music_down_png,music_non_down_png,music_non_normal_png,music_normal_png,pause_down_png,pause_normal_png,play_down_png,play_normal_png,retry2_down_png,retry2_normal_png,retry_down_png,retry_normal_png,return_down_png,return_normal_png,setting_down_png,setting_normal_png,sound_down_png,sound_non_down_png,sound_non_normal_png,sound_normal_png"
+		},
+		{
+			"url": "protobuf/msg.proto",
+			"type": "text",
+			"name": "msg_proto"
 		}
 	]
 }

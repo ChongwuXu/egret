@@ -10,16 +10,17 @@
 		"libs/modules/socket/socket.js",
 		"libs/modules/promise/promise.js",
 		"libs/modules/puremvc/puremvc.js",
-		"libs/modules/WochengSdk/WochengSdk.js"
+		"libs/modules/WochengSdk/WochengSdk.js",
+		"libs/modules/protobuf/protobuf.js"
 	],
 	"game": [
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/LoadingUI.js",
-		"bin-debug/game/common/BitmapTest.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/game/common/AnchorTest.js",
-		"bin-debug/AssetAdapter.js",
+		"bin-debug/game/common/BitmapTest.js",
 		"bin-debug/game/common/GridSprite.js",
 		"bin-debug/game/common/Http.js",
 		"bin-debug/game/common/ShapeGrid.js",
