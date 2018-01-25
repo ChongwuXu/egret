@@ -1,15 +1,10 @@
 syntax = "proto3"; 
 package Test;
 
-import "./test1.proto";
-
-
 message Message {
 	int32 ID   = 1;      // 消息ID
-	bytes MSG  = 2;	  // 消息内容Bytes(Protobuff)
+	bytes MSG  = 2;	  	// 消息内容Bytes(Protobuff)
 }
-
-
 //登录信息  MsgID : 100
 message Login {
 	  string SID 		= 1;			//  SessionID

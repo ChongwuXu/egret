@@ -1,0 +1,32 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/eui/eui.js",
+		"libs/modules/res/res.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/game/game.js",
+		"promise/bin/promise.js"
+	],
+	"game": [
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/AvatarConfig.js",
+		"bin-debug/AvatarLoopLine.js",
+		"bin-debug/AvatarLoopLineConfig.js",
+		"bin-debug/AvatarLoopLineItem.js",
+		"bin-debug/GameArraw.js",
+		"bin-debug/GameConf.js",
+		"bin-debug/GamePlayScreen.js",
+		"bin-debug/LoadingScreen.js",
+		"bin-debug/MainScreen.js",
+		"bin-debug/RewardConfig.js",
+		"bin-debug/SplashScreen.js",
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/skins/Avatar.js",
+		"bin-debug/skins/ButtonBegin.js",
+		"bin-debug/skins/ButtonHuang.js",
+		"bin-debug/skins/GamePlayGroup.js",
+		"bin-debug/skins/GameRewardGroup.js",
+		"bin-debug/skins/LoadingGroup.js"
+	]
+}

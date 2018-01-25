@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ButtonHongSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" width="245" height="75">
+	<w:Declarations>
+	</w:Declarations>
+    <e:Image width="100%" height="100%" alpha.disabled="0.5"
+            
+             anchorOffsetX="0" anchorOffsetX.down="0" y.down="2" x.down="1" source="zww_btn_hong_png" scale9Grid="76,36,261,41" source.down="zww_btn_hong_png"/>
+    <e:Label id="labelDisplay" top="8" bottom="8" left="8" right="8"
+             size="30"
+             textColor="0xFFFFFF" verticalAlign="middle" textAlign="center"/>
+    <e:Image id="iconDisplay" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

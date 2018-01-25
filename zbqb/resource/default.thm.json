@@ -1,0 +1,24 @@
+{
+  "skins": {
+    "eui.ButtonBegin": "resource/eui_skins/zb_skins/ButtonBeginSkin.exml",
+    "eui.ButtonHuang": "resource/eui_skins/zb_skins/ButtonHuangSkin.exml",
+    "eui.ButtonLiang": "resource/eui_skins/zb_skins/ButtonLiangSkin.exml",
+    "eui.ButtonHong": "resource/eui_skins/zb_skins/ButtonHongSkin.exml"
+  },
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    "resource/eui_skins/zb_skins/AvatarG1Skin.exml",
+    "resource/eui_skins/zb_skins/AvatarHt1Skin.exml",
+    "resource/eui_skins/zb_skins/AvatarJ1Skin.exml",
+    "resource/eui_skins/zb_skins/AvatarSkin.exml",
+    "resource/eui_skins/zb_skins/AvatarT1Skin.exml",
+    "resource/eui_skins/zb_skins/AvatarX1Skin.exml",
+    "resource/eui_skins/zb_skins/ButtonBeginSkin.exml",
+    "resource/eui_skins/zb_skins/ButtonHongSkin.exml",
+    "resource/eui_skins/zb_skins/ButtonHuangSkin.exml",
+    "resource/eui_skins/zb_skins/ButtonLiangSkin.exml",
+    "resource/eui_skins/zb_skins/GamePlaySkin.exml",
+    "resource/eui_skins/zb_skins/GameRewardSkin.exml",
+    "resource/eui_skins/zb_skins/LoadingSkin.exml"
+  ]
+}

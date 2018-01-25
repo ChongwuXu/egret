@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.AvatarHt1Skin" width="165" height="268" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="avatar1" width="165" height="258" x="0" y="10" source="ht1_png"/>
+	<e:Image id="avatar2" width="165" height="258" x="0" y="10" source="ht2_png" visible="false"/>
+	<e:Group id="area" width="16" height="16" x="70" y="134" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Group id="areaBig" width="85" height="60" x="38" y="100" anchorOffsetX="0" anchorOffsetY="0"/>
+</e:Skin>

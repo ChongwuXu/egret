@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OnlineSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+<e:Image height="482" width="427" x="25" y="140" source="bg_general_1_png"/>
+<e:Button id="btnClose" horizontalCenter="185.5" verticalCenter="-237.5" width="47" height="45" anchorOffsetX="0" anchorOffsetY="0">
+	<e:skinName>
+		<e:Skin states="up,down,disabled">
+		<e:Image width="100%" height="100%" source="bth_general_close_png" source.down="bth_general_close_png"/>
+		<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+	</e:skinName>
+
+	</e:Button>
+
+	<e:Scroller id="onlineListGroup" width="370" height="360" x="55" y="200" scrollPolicyH="off" anchorOffsetX="0" anchorOffsetY="0">
+	  <e:viewport>
+	    <e:List id="onlineList" width="100%" height="100%" x="0" y="0" scaleX="1" scaleY="1"/>
+		</e:viewport>
+	</e:Scroller>
+	<e:Label id="textv" text="开启虚拟布局" x="90" y="62" anchorOffsetX="0" width="252" anchorOffsetY="0" height="46" textColor="0xf20909"/>
+
+<!--	
+	<e:Image height="84" width="364" x="59" y="190" source="panel_online_png"/>
+	<e:Image height="84" width="364" x="59" y="286" source="panel_online_png"/>
+	<e:Image height="84" width="364" x="59" y="385" source="panel_online_png"/>
+	<e:Image height="84" width="364" x="59" y="480" source="panel_online_png"/>
+	<e:Image id="onlineRw0" height="50" width="50" x="75" y="205" source="panel_general_12_png"/>
+	<e:Image id="onlineRw1" height="50" width="50" x="75" y="300" source="panel_general_12_png"/>
+	<e:Image id="onlineRw2" height="50" width="50" x="75" y="400" source="panel_general_12_png"/>
+	<e:Image id="onlineRw3" height="50" width="50" x="75" y="495" source="panel_general_12_png"/>
+	
+	<e:Label text="累计在线30分钟" x="140" y="210" size="18" width="150" textColor="0xf76a09" bold="true"/>
+	<e:Label text="奖励:" x="140" y="245" size="16" textColor="0xceb067" bold="true" width="50"/>
+	<e:Label text="累计在线60分钟" x="140" y="300" size="18" width="150" textColor="0xF76A09" bold="true"/>
+	<e:Label text="奖励:" x="140" y="335" size="16" textColor="0xCEB067" bold="true" width="50"/>
+	<e:Label text="累计在线90分钟" x="140" y="400" size="18" width="150" textColor="0xF76A09" bold="true"/>
+	<e:Label text="奖励:" x="140" y="440" size="16" textColor="0xCEB067" bold="true" width="50"/>
+	<e:Label text="累计在线120分钟" x="140" y="496" size="18" width="150" textColor="0xF76A09" bold="true"/>-->
+<!--	
+	<e:Label text="奖励:" x="140" y="530" size="16" textColor="0xCEB067" bold="true" width="50"/>
+	<e:Button id="btnReceive0" label="" x="330" y="220" visible="false">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="bth_general_receive_1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="btnReceive1" label="" x="330" y="315" visible="false">
+		<e:Skin states="up,down,disabled">
+		<e:Image width="100%" height="100%" source="bth_general_receive_1_png"/>
+		<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+	</e:Button>
+	<e:Button id="btnReceive2" label="" x="330" y="410" visible="false">
+		<e:Skin states="up,down,disabled">
+		<e:Image width="100%" height="100%" source="bth_general_receive_1_png"/>
+		<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+	</e:Button>
+	<e:Button id="btnReceive3" label="" x="330" y="505" visible="false">
+		<e:Skin states="up,down,disabled">
+		<e:Image width="100%" height="100%" source="bth_general_receive_1_png"/>
+		<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+	</e:Button>
+	<e:Label id="textTime0" text="01:11:36" x="300" y="220" textColor="0xe0cea8" visible="false"/>
+	<e:Label text="01:11:36" x="300" y="316" textColor="0xE0CEA8" id="textTime1" visible="false"/>
+	<e:Label text="01:11:36" x="300" y="410" textColor="0xE0CEA8" id="textTime2" visible="false"/>
+	<e:Label text="01:11:36" x="300" y="505" textColor="0xE0CEA8" id="textTime3" visible="false"/>-->
+
+</e:Skin>

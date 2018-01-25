@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.ButtonBeginSkin" states="up,down" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" width="255" height="102">
+    <e:Image id="bgImage" width="100%" height="100%"
+             anchorOffsetX="0" anchorOffsetX.down="0" y.down="2" x.down="1" source.down="kaishi_1_png" source="kaishi_1_png"/>
+	<e:Image id="bgImage0" width="100%" height="100%" anchorOffsetX="0" x="0" y="0" source="kaishi_2_png" x.down="2" y.down="1" visible="false"/>
+    <e:Label id="labelDisplay" top="8" bottom="8" left="8" right="8"
+             size="20"
+             textColor="0xFFFFFF" verticalAlign="middle" textAlign="center"/>
+    <e:Image id="iconDisplay" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

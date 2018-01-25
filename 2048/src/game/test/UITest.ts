@@ -34,23 +34,42 @@ class UITest extends egret.DisplayObjectContainer{
     }
      private onClick1(event:egret.TouchEvent):void{
         this.sock = new egret.WebSocket();
+        this.sock.type = egret.WebSocket.TYPE_BINARY;
         this.sock.addEventListener(egret.ProgressEvent.SOCKET_DATA,this.onReceiveMessage,this);
         this.sock.addEventListener(egret.Event.CONNECT,this.onScoketOpen,this);
-        this.sock.connect("echo.websocket.org",80);
+        this.sock.addEventListener(egret.Event.CLOSE, this.onSocketClose, this);
+        this.sock.addEventListener(egret.IOErrorEvent.IO_ERROR, this.onSocketError, this);
+        // this.sock.connect("echo.websocket.org",80);
+        // this.sock.connect("192.168.8.246",65529);
+        this.sock.connect("127.0.0.1",65529);
      }
+
+    private onSocketClose(e:egret.Event): void {
+        console.log("WebSocketClose");
+    }
+
+    private onSocketError(): void {
+        console.log("WebSocketError");
+    }
     private onClick(event:egret.TouchEvent):void{
-
-        protobuf.load("resource/protobuf/test.proto",(errr:any,root:any)=>{
-            this._proto = root.Test;
-            console.log(this._proto);
-
-        });
-
-
-
         if(this.sock && this.sock.connected){
-            var cmd = '{"cmd":"uzwan_login","gameId":"0","from":"guzwan","userId":"3565526"}';
-            this.sock.writeUTF(cmd);
+            // var cmd = '{"cmd":"uzwan_login","gameId":"0","from":"guzwan","userId":"3565526"}';
+            // this.sock.writeUTF(cmd);
+
+            var obj: Object = {
+                SID: "123456",
+                RID: 0,
+                GPS_LNG: 0,
+                GPS_LAT: 0,
+                openid: "000",
+                token: undefined
+            }
+            let buff:Uint8Array = ProtoMgr.getInstance().getProto(1,obj);
+            let byte:egret.ByteArray = new egret.ByteArray();
+            byte._writeUint8Array(buff);
+            this.sock.writeBytes(byte);
+            this.sock.flush();
+
         }else{
             console.log("socket not connected!");
         }
@@ -85,8 +104,11 @@ class UITest extends egret.DisplayObjectContainer{
         // })
     }
     private onReceiveMessage(event:egret.ProgressEvent):void{
-        let msg = this.sock.readUTF();
-        console.log("收到数据："+ msg);
+        // let msg = this.sock.readUTF();
+        let byte:egret.ByteArray = new egret.ByteArray();
+        this.sock.readBytes(byte);
+        let msg = ProtoMgr.getInstance().getMessage(byte);
+        console.log("收到数据："+ msg.SID);
     }
     private onScoketOpen(event:egret.Event):void{
         console.log("链接服务器成功！");

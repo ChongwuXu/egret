@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.GamePlaySkin" width="1280" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image width="1280" height="960" x="0" y="0" source="zww_bg_png"/>
+	<e:Group id="grpGame" width="1280" height="960" x="0" y="0">
+		<e:Image id="panel_bg" width="2560" height="238" x="0" y="755" source="zww_bg_ysd_png" fillMode="repeat" scaleX="0.5" scaleY="0.5"/>
+		<e:Image id="panel_up_bg" width="2560" height="238" x="0" y="555" source="zww_bg_ysd_png" fillMode="repeat" scaleX="0.5" scaleY="0.5"/>
+		<e:Group id="grpUpPanel" width="1280" height="115" x="0" y="483" anchorOffsetY="0">
+			<ns1:Avatar id="origAvatar2" width="165" height="268" x="560.1" y="-145" skinName="skins.AvatarSkin" scaleX="1" scaleY="1" enabled="false"/>
+		</e:Group>
+		<e:Group id="grpDownPanel" width="1280" height="115" x="0" y="683" anchorOffsetY="0">
+			<ns1:Avatar id="origAvatar1" width="165" height="268" x="224.07" y="-145" skinName="skins.AvatarSkin" scaleX="1" scaleY="1" enabled="false"/>
+		</e:Group>
+		<e:Group id="grpArraw" width="165" height="960" y="-682" horizontalCenter="0.5">
+			<e:Image width="36" height="960" y="-97.5" source="zww_icon_z_png" fillMode="repeat" x="65"/>
+			<e:Image id="arraw1" width="140" height="112" x="13" y="845" source="zww_icon_z1_png" visible="false"/>
+			<e:Image id="arraw2" width="140" height="116" x="12" y="845" source="zww_icon_z2_png"/>
+			<e:Image id="arraw3" width="165" height="115" x="0" y="845" source="zww_icon_z3_png" visible="false"/>
+			<e:Group id="arrawArea" width="16" height="16" y="919" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="grpUp" width="1280" height="200" x="0" y="0">
+		<e:Image width="77" height="960" x="57" y="0" source="zww_bg_b_png" scaleX="-1"/>
+		<e:Image width="77" height="960" y="0" source="zww_bg_b_png" scaleX="1" right="-20"/>
+		<e:Image width="1280" height="190" x="0" y="-16" source="zww_bg_t_png"/>
+		<e:Image width="1280" height="109" x="0" y="-16" source="zww_bg_tt_png"/>
+		<e:Image width="288" height="84" x="38.06" y="169" source="zww_bg_m_png" scaleX="1" scaleY="1"/>
+		<e:Label id="labCredits" text="1/10" x="203" y="196" anchorOffsetX="0" width="91" verticalAlign="middle" textAlign="center" fontFamily="Arial" size="28"/>
+	</e:Group>
+</e:Skin>

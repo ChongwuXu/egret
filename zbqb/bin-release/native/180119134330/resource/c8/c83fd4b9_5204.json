@@ -1,0 +1,251 @@
+{
+	"groups": [
+		{
+			"keys": "zww_icon_z3_png,zww_icon_z2_png,zww_icon_z1_png,zww_icon_z_png,zww_bg_png,zww_bg_ysd_png,zww_bg_tt_png,zww_bg_t_png,zww_bg_m_png,zww_bg_b_png,x2_png,x1_png,t2_png,t1_png,j2_png,j1_png,ht2_png,ht1_png,g2_png,g1_png,zww_btn_hong_png,zww_bg_tck2_png,zww_bg_tck_png,zww_bg_hdk_png,zww_bg_g2_png,zww_bg_g_png,zww_bg_btk_png,zww_bg_k_d_png,zww_bg_k_png,zww_btn_huang_png",
+			"name": "GamePlayScreen"
+		},
+		{
+			"keys": "kaishi_1_png,kaishi_2_png,start_png",
+			"name": "MainScreen"
+		},
+		{
+			"keys": "loading_bg_png,loading_4_png,loading_3_png,loading_2_png,loading_1_png,loading_j2_png,loading_j1_png",
+			"name": "LoadingScreen"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/logo_960.jpg",
+			"type": "image",
+			"name": "logo_960_jpg"
+		},
+		{
+			"url": "assets/ui/Animal/g1.png",
+			"type": "image",
+			"name": "g1_png"
+		},
+		{
+			"url": "assets/ui/Animal/g2.png",
+			"type": "image",
+			"name": "g2_png"
+		},
+		{
+			"url": "assets/ui/Animal/ht1.png",
+			"type": "image",
+			"name": "ht1_png"
+		},
+		{
+			"url": "assets/ui/Animal/ht2.png",
+			"type": "image",
+			"name": "ht2_png"
+		},
+		{
+			"url": "assets/ui/Animal/j1.png",
+			"type": "image",
+			"name": "j1_png"
+		},
+		{
+			"url": "assets/ui/Animal/j2.png",
+			"type": "image",
+			"name": "j2_png"
+		},
+		{
+			"url": "assets/ui/Animal/t1.png",
+			"type": "image",
+			"name": "t1_png"
+		},
+		{
+			"url": "assets/ui/Animal/t2.png",
+			"type": "image",
+			"name": "t2_png"
+		},
+		{
+			"url": "assets/ui/Animal/x1.png",
+			"type": "image",
+			"name": "x1_png"
+		},
+		{
+			"url": "assets/ui/Animal/x2.png",
+			"type": "image",
+			"name": "x2_png"
+		},
+		{
+			"url": "assets/ui/Common/zww_bg_k.png",
+			"type": "image",
+			"name": "zww_bg_k_png",
+			"scale9grid": "69,103,8,805"
+		},
+		{
+			"url": "assets/ui/Common/zww_bg_k_d.png",
+			"type": "image",
+			"name": "zww_bg_k_d_png",
+			"scale9grid": "50,50,4,4"
+		},
+		{
+			"url": "assets/ui/Common/zww_btn_gb.png",
+			"type": "image",
+			"name": "zww_btn_gb_png"
+		},
+		{
+			"url": "assets/ui/Common/zww_btn_huang.png",
+			"type": "image",
+			"name": "zww_btn_huang_png",
+			"scale9grid": "101,65,306,6"
+		},
+		{
+			"url": "assets/ui/Common/zww_btn_lr.png",
+			"type": "image",
+			"name": "zww_btn_lr_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_bg.png",
+			"type": "image",
+			"name": "zww_bg_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_bg_b.png",
+			"type": "image",
+			"name": "zww_bg_b_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_bg_m.png",
+			"type": "image",
+			"name": "zww_bg_m_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_bg_t.png",
+			"type": "image",
+			"name": "zww_bg_t_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_bg_tt.png",
+			"type": "image",
+			"name": "zww_bg_tt_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_bg_ysd.png",
+			"type": "image",
+			"name": "zww_bg_ysd_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_icon_z.png",
+			"type": "image",
+			"name": "zww_icon_z_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_icon_z1.png",
+			"type": "image",
+			"name": "zww_icon_z1_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_icon_z2.png",
+			"type": "image",
+			"name": "zww_icon_z2_png"
+		},
+		{
+			"url": "assets/ui/Game/zww_icon_z3.png",
+			"type": "image",
+			"name": "zww_icon_z3_png"
+		},
+		{
+			"url": "assets/ui/Prompt/zww_bg_tck.png",
+			"type": "image",
+			"name": "zww_bg_tck_png"
+		},
+		{
+			"url": "assets/ui/Prompt/zww_bg_tck2.png",
+			"type": "image",
+			"name": "zww_bg_tck2_png"
+		},
+		{
+			"url": "assets/ui/Prompt/zww_btn_hong.png",
+			"type": "image",
+			"name": "zww_btn_hong_png"
+		},
+		{
+			"url": "assets/ui/Win/zww_bg_btk.png",
+			"type": "image",
+			"name": "zww_bg_btk_png"
+		},
+		{
+			"url": "assets/ui/Win/zww_bg_g.png",
+			"type": "image",
+			"name": "zww_bg_g_png"
+		},
+		{
+			"url": "assets/ui/Win/zww_bg_g2.png",
+			"type": "image",
+			"name": "zww_bg_g2_png"
+		},
+		{
+			"url": "assets/ui/Win/zww_bg_hdk.png",
+			"type": "image",
+			"name": "zww_bg_hdk_png"
+		},
+		{
+			"url": "assets/ui/start/kaishi_1.png",
+			"type": "image",
+			"name": "kaishi_1_png"
+		},
+		{
+			"url": "assets/ui/start/kaishi_2.png",
+			"type": "image",
+			"name": "kaishi_2_png"
+		},
+		{
+			"url": "assets/ui/start/start.png",
+			"type": "image",
+			"name": "start_png"
+		},
+		{
+			"url": "assets/ui/Icon/icon.png",
+			"type": "image",
+			"name": "icon_png"
+		},
+		{
+			"url": "assets/ui/Icon/icon2.png",
+			"type": "image",
+			"name": "icon2_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_1.png",
+			"type": "image",
+			"name": "loading_1_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_2.png",
+			"type": "image",
+			"name": "loading_2_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_3.png",
+			"type": "image",
+			"name": "loading_3_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_4.png",
+			"type": "image",
+			"name": "loading_4_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_bg.png",
+			"type": "image",
+			"name": "loading_bg_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_j1.png",
+			"type": "image",
+			"name": "loading_j1_png"
+		},
+		{
+			"url": "assets/ui/loading/loading_j2.png",
+			"type": "image",
+			"name": "loading_j2_png"
+		}
+	]
+}

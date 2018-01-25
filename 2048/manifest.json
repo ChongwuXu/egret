@@ -14,18 +14,26 @@
 		"libs/modules/protobuf/protobuf.js"
 	],
 	"game": [
-		"bin-debug/AssetAdapter.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/game/common/base/Singleton.js",
+		"bin-debug/game/common/utils/ProtoUtils.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
-		"bin-debug/game/common/AnchorTest.js",
-		"bin-debug/game/common/BitmapTest.js",
-		"bin-debug/game/common/GridSprite.js",
-		"bin-debug/game/common/Http.js",
-		"bin-debug/game/common/ShapeGrid.js",
-		"bin-debug/game/common/TimerTest.js",
-		"bin-debug/game/common/UITest.js",
-		"bin-debug/game/common/VideoTest.js"
+		"bin-debug/game/ProtoMgr.js",
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/game/common/net/Net.js",
+		"bin-debug/game/common/utils/ByteUtils.js",
+		"bin-debug/game/common/utils/ImageUtils.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/game/test/AnchorTest.js",
+		"bin-debug/game/test/BitmapTest.js",
+		"bin-debug/game/test/GridSprite.js",
+		"bin-debug/game/test/Http.js",
+		"bin-debug/game/test/ShapeGrid.js",
+		"bin-debug/game/test/TimerTest.js",
+		"bin-debug/game/test/UITest.js",
+		"bin-debug/game/test/VideoTest.js",
+		"bin-debug/game/wrap/Login.js",
+		"bin-debug/game/wrap/Message.js"
 	]
 }
