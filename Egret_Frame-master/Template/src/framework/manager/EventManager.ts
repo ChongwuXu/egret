@@ -10,7 +10,7 @@
 
 class EventManager extends egret.EventDispatcher{
 	private static instance: EventManager;
-
+	
 	//构造函数必须私有
 	private constructor() {
 		super();

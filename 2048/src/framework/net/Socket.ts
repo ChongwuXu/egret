@@ -1,4 +1,4 @@
-class Net {
+class Socket {
 	private socket:egret.WebSocket;
 	
 	public constructor() {
