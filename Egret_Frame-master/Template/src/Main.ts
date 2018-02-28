@@ -79,7 +79,7 @@ class Main extends eui.UILayer {
 
         let obj = { id:1,name:2};
         let data = JSON.stringify(obj);
-        NativeManager.Instance.callNative(NativeFunc.callNative, data);
+        // NativeManager.Instance.callNative(NativeFunc.callNative, data);
         // this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClick, this);
         // this.changeEffect();
         

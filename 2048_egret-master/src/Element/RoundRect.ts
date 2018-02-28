@@ -15,7 +15,9 @@ class RoundRect{
 
 
 	public static getWidthByContent(content) {
-		let len = content.toString().length
+		let len = 0;
+		if(content)
+			len = content.toString().length
 		return len > 4 ? 32 * len : RoundRect.INIT_WIDTH
 	}
 }
