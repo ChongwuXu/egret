@@ -11,7 +11,7 @@ class Layer extends eui.Component{
 		this.addEventListener(egret.Event.REMOVED_FROM_STAGE,this.onDestroy,this);
 	}
 	protected init(): void{
-		console.log(this.TAG + "init");
+		console.log(this.TAG + " init");
 		this._registerCustomUIEventsList(true);
 		this.setOnTouchListener();
 		this.watchData();

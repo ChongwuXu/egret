@@ -7,7 +7,7 @@
 declare interface Platform {
 
     getUserInfo(): Promise<any>;
-
+    init(): Promise<any>;
     login(): Promise<any>
 
 }
@@ -15,6 +15,9 @@ declare interface Platform {
 class DebugPlatform implements Platform {
     async getUserInfo() {
         return { nickName: "username" }
+    }
+    async init(){
+        
     }
     async login() {
 
