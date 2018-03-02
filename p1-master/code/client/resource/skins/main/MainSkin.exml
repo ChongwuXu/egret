@@ -1,0 +1,13 @@
+<e:Skin class="MainView" width="1334" height="750" xmlns:e="http://ns.egret.com/eui" xmlns:com_main="com_main.*" xmlns:w="http://ns.egret.com/wing" xmlns:AGame="AGame.*" xmlns:ns1="*">
+	<w:Config id="159d8c47d8d"/>
+	<e:Image id="m_pBgImg" source="main_bg_jpg" width="1334" height="750" anchorOffsetX="667" anchorOffsetY="375" x="667" y="375"/>
+	<e:Group id="m_pRightLowGroup" width="534" height="100" anchorOffsetX="267" anchorOffsetY="50" x="1067" y="704">
+		<e:Image source="mainBoomUI_json.main_entranceBg" x="0" y="50"/>
+		<ns1:EntranceBtn id="m_pHeroBtn" x="21.749999999999886" y="0" skinName="HeroBtnSkin"/>
+		<ns1:EntranceBtn id="m_pChipBtn" x="121.74999999999989" y="0" skinName="ChipBtnSkin"/>
+		<ns1:EntranceBtn id="m_pBagBtn" x="221.7499999999999" y="0" skinName="BagBtnSkin"/>
+		<ns1:EntranceBtn id="m_pFriendBtn" width="100" height="100" x="321.7499999999999" y="0" skinName="FriendBtnSkin"/>
+		<ns1:EntranceBtn id="m_pGrowUpBtn" width="100" height="100" x="421.7499999999999" y="0" skinName="GrowUpBtnSkin"/>
+	</e:Group>
+	<ns1:MainPlayerFace x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" skinName="MainPlayerFaceSkin"/>
+</e:Skin>

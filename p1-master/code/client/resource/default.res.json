@@ -1,0 +1,112 @@
+{
+	"groups": [
+		{
+			"keys": "loading_bg_1_jpg,combat_tiao_3_png,logoBoomUI_json,loadingUI_json,protobuf_proto,config_zip",
+			"name": "preload"
+		},
+		{
+			"keys": "mainBoomUI_json,loading_bg_2_jpg,main_bg_jpg",
+			"name": "mainUI"
+		},
+		{
+			"keys": "loading_png,loading_json",
+			"name": "animUI"
+		},
+		{
+			"keys": "button_mp3,main_bgm_mp3",
+			"name": "soundUI"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/eui/mainBoomUI.json",
+			"type": "sheet",
+			"name": "mainBoomUI_json",
+			"subkeys": "main_RankFaceBg,main_btnBg,main_decorate1,main_decorate2,main_entranceBg,main_entranceBtn1,main_entranceBtn2,main_entranceBtn3,main_entranceBtn4,main_entranceBtn5,main_entranceBtn6,main_entranceBtn7,main_face,main_linkBg,main_linkImg1,main_linkImg2,main_linkImg3,main_lvBg,main_modleBtn1,main_modleBtn1hui,main_playerBg,main_playerMsgBg,main_playerPro,main_playerProBg,main_rankBg,main_rankFont,mian_font1,mian_font2,mian_font3,mian_font4,mian_lockFont"
+		},
+		{
+			"url": "assets/eui/common_bg_0.png",
+			"type": "image",
+			"name": "common_bg_0_png"
+		},
+		{
+			"url": "assets/eui/common_bg_1.png",
+			"type": "image",
+			"name": "common_bg_1_png"
+		},
+		{
+			"url": "assets/eui/commonUI.json",
+			"type": "sheet",
+			"name": "commonUI_json",
+			"subkeys": "commog_bg_05,common_bg_02,common_bg_03,common_bg_04,common_btn_01,common_btn_02,common_btn_03,common_closebtn,common_faceFont_01,common_guangbiao_01,common_img_04,common_lvBg_01,common_lvBg_02,common_lvBg_03,common_reddot_01,common_strong,common_tiao_01,common_tiao_02,common_tiao_03,common_tiaomask,common_title_01,common_weak,comnon_btn_04,comon_btnfont_05,comon_btnfont_06,comon_btnfont_07,comon_btnfont_08,comon_btnfont_09,get_face_bg,get_face_bg_02,get_face_bg_03,gift_bg,gift_font,gift_titile,goodsGet_img,login_7_day_bg,mail_Arr_01,mail_Arr_02,mail_bgImg_05,mail_bg_01,mail_bg_02,mail_btnfont_01,mail_btnfont_02,mail_btnfont_03,mail_btnfont_04,mail_btnfont_05,mail_font_01,mail_kuang_01,mail_mailclose_01,mail_mailclose_02,mail_mailopen_02,mail_numImg_01,mail_start_01,mail_xian_01,mail_xian_02,mail_xinfeng,mail_xinxian,notice_font_02,present_font_03"
+		},
+		{
+			"url": "assets/eui/combat_tiao_3.png",
+			"type": "image",
+			"name": "combat_tiao_3_png"
+		},
+		{
+			"url": "assets/eui/loading_bg_1.jpg",
+			"type": "image",
+			"name": "loading_bg_1_jpg"
+		},
+		{
+			"url": "assets/eui/loading_bg_2.jpg",
+			"type": "image",
+			"name": "loading_bg_2_jpg"
+		},
+		{
+			"url": "assets/eui/logoBoomUI.json",
+			"type": "sheet",
+			"name": "logoBoomUI_json",
+			"subkeys": "loading_btn_0,loading_btn_1,loading_tiao_0,loading_tiao_1,loading_tiao_2,loading_yun_0,logo"
+		},
+		{
+			"url": "assets/animUI/loading.png",
+			"type": "image",
+			"name": "loading_png"
+		},
+		{
+			"url": "assets/animUI/loading.json",
+			"type": "json",
+			"name": "loading_json"
+		},
+		{
+			"url": "assets/eui/main_bg.jpg",
+			"type": "image",
+			"name": "main_bg_jpg"
+		},
+		{
+			"url": "assets/eui/commonBoom.json",
+			"type": "sheet",
+			"name": "commonBoom_json",
+			"subkeys": "common_goldsBg,common_goldsBtn,common_grading,common_redDot1,common_redDot2"
+		},
+		{
+			"url": "assets/eui/loadingUI.json",
+			"type": "sheet",
+			"name": "loadingUI_json",
+			"subkeys": "loading_bar_1,loading_bar_2,loading_bar_3,loading_bar_4,loading_icon_1"
+		},
+		{
+			"url": "assets/config/protobuf.proto",
+			"type": "text",
+			"name": "protobuf_proto"
+		},
+		{
+			"url": "assets/config/config.zip",
+			"type": "bin",
+			"name": "config_zip"
+		},
+		{
+			"url": "assets/sound/main_bgm.mp3",
+			"type": "sound",
+			"name": "main_bgm_mp3"
+		},
+		{
+			"url": "assets/sound/button.mp3",
+			"type": "sound",
+			"name": "button_mp3"
+		}
+	]
+}
